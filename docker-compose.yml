@@ -39,7 +39,7 @@ services:
     networks:
       - backend-net
     ports:
-      - "55555:5555"
+      - "10000:5555"
 
   frontend:
     build:
