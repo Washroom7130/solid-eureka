@@ -18,7 +18,7 @@ export default function ThanhCongDangKyPage() {
   useEffect(() => {
     const confirmSuccess = async () => {
       try {
-        const res = await fetch(`http://localhost:10000/api/sukien/dangky/${token}/success`, {
+        const res = await fetch(`http://backend:5555/api/sukien/dangky/${token}/success`, {
           credentials: 'include',
         });
 
@@ -46,7 +46,7 @@ export default function ThanhCongDangKyPage() {
     setSubmitError('');
 
     try {
-      const res = await fetch(`http://localhost:10000/api/cauhoi/${maDangKy}/add`, {
+      const res = await fetch(`http://backend:5555/api/cauhoi/${maDangKy}/add`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

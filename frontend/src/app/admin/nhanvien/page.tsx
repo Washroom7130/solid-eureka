@@ -61,7 +61,7 @@ export default function NhanVienPage() {
 
   const fetchData = async () => {
     try {
-      const res = await fetch(`http://localhost:10000/api/admin/nhanvien/get/all?page=${page}&size=${pageSize}&search=${encodeURIComponent(search)}`, {
+      const res = await fetch(`http://backend:5555/api/admin/nhanvien/get/all?page=${page}&size=${pageSize}&search=${encodeURIComponent(search)}`, {
         credentials: 'include',
       });
       if (res.ok) {
@@ -104,7 +104,7 @@ export default function NhanVienPage() {
     setDetailError('');
 
     try {
-      const res = await fetch(`http://localhost:10000/api/admin/nhanvien/get/${maId}`, {
+      const res = await fetch(`http://backend:5555/api/admin/nhanvien/get/${maId}`, {
         credentials: 'include'
       });
       const data = await res.json();
@@ -135,7 +135,7 @@ export default function NhanVienPage() {
     setAdding(true);
   
     try {
-      const res = await fetch('http://localhost:10000/api/admin/nhanvien/add', {
+      const res = await fetch('http://backend:5555/api/admin/nhanvien/add', {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
@@ -350,8 +350,8 @@ export default function NhanVienPage() {
 
                   const endpoint =
                     selectedStatus === 'Hoạt Động'
-                      ? `http://localhost:10000/api/admin/nhanvien/deactivate/${selectedIdForStatusChange}`
-                      : `http://localhost:10000/api/admin/nhanvien/activate/${selectedIdForStatusChange}`;
+                      ? `http://backend:5555/api/admin/nhanvien/deactivate/${selectedIdForStatusChange}`
+                      : `http://backend:5555/api/admin/nhanvien/activate/${selectedIdForStatusChange}`;
 
                   try {
                     const res = await fetch(`${endpoint}`, {

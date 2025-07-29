@@ -39,7 +39,7 @@ services:
     networks:
       - backend-net
     ports:
-      - "10000:5555"
+      - "5555:5555"
 
   frontend:
     build:
@@ -48,7 +48,7 @@ services:
     networks:
       - backend-net
     ports:
-      - "30000:3000"
+      - "3000:3000"
     depends_on:
       - mysql
       - backend
