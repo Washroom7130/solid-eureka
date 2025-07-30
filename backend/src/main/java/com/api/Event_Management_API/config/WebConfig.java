@@ -39,7 +39,7 @@ public class WebConfig {
                 cors.addMapping("/**")
                     .allowedOrigins(FRONTEND_ORIGIN)
                     .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                    .allowedHeaders("Cookie", "Content-Type")
+                    .allowedHeaders("*")
                     .allowCredentials(true)
                     .maxAge(3600); // cache preflight response for 1 hour
             }
