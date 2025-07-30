@@ -37,6 +37,7 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry cors) {
                 cors.addMapping("/**")
+                    .allowedOrigins(FRONTEND_ORIGIN)
                     .allowedMethods("*")
                     .allowedHeaders("*")
                     .allowCredentials(true)
