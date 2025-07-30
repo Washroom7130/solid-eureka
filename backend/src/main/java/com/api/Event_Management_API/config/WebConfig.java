@@ -29,7 +29,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig {
 
     // Adjust frontend domain in production
-    private static final String FRONTEND_ORIGIN = "http://frontend:3000";
+    // private static final String FRONTEND_ORIGIN = "http://frontend:3000";
 
     @Bean
     public WebMvcConfigurer corsConfigurer() {
@@ -37,7 +37,6 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry cors) {
                 cors.addMapping("/**")
-                    .allowedOrigins(FRONTEND_ORIGIN)
                     .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                     .allowedHeaders("*")
                     .allowCredentials(true)
